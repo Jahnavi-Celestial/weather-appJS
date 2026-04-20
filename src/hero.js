@@ -9,6 +9,13 @@ const heroSection = () => {
   const heroDiv = document.createElement("div");
   heroDiv.id = "hero-div";
 
+  let curDate = new Date();
+  const day = curDate.getDate();
+  const month = curDate.toLocaleDateString("en-US", { month: "long" });
+  const weekday = curDate.toLocaleDateString("en-US", {
+    weekday: "long",
+  });
+
   const hDiv1 = document.createElement("div");
   hDiv1.id = "hDiv1";
   hDiv1.className = "light-div";
@@ -22,7 +29,7 @@ const heroSection = () => {
                    </div> 
                    <div class="calender">
                       <span><i class="fa-solid fa-calendar-days" style="font-size: 22px;"></i></span>
-                      <p><span class="date">18 April</span> <span class="day">Saturday</span></p>
+                      <p><span class="date">${day} ${month}</span> <span class="day">${weekday}</span></p>
                    </div> 
                   `;
 
@@ -79,7 +86,7 @@ const heroSection = () => {
     const row = document.createElement("div");
     row.className = "completeDayInfo";
     row.innerHTML = `<div class='info'>
-                        <div id="day-${i}">Saturday</div>
+                        <div id="day-${i}">${weekday}</div>
                         <div id="date-${i}">${12 + i * 3}:30</div>
                      </div>
                      <div id="curTemp-${i}">32°C</div>`;
