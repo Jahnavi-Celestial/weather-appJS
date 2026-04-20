@@ -1,7 +1,6 @@
 const checkWeatherLogic = (city) => {
     async function checkWeather(city){
-    //   const res = await fetch(`/api/weather?city=${city}`)
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=7f997ebe8fb5a607ff5a9b38d7d279d4`)
+      const res = await fetch(`/api/weather?city=${city}`)
 
       if(res.status == 404){
         const errorDiv = document.createElement('div')
