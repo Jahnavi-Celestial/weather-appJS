@@ -4,7 +4,7 @@ const locationIconLogic = (locationIcon) => {
     errorDiv.className = "light-div";
     errorDiv.id = "error-div";
     errorDiv.innerHTML = `<p>Something went wrong. Please try again!</p>
-                          <p id='closeBtn'>close</p>
+                          <p id='closeBtn'><i class="fa-solid fa-x" style="font-size: 25px;"></i></p>
                          `;
     locationIcon.style.pointerEvents = "none";
 
