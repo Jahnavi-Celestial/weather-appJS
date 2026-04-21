@@ -44,6 +44,8 @@ const nextForecastSection = () => {
   btnDiv7.className = "light-div btns";
   btnDiv7.innerHTML = "23 Apr Thur";
 
+  
+
   buttonsDiv.append(
     btnDiv1,
     btnDiv2,
@@ -65,8 +67,8 @@ const nextForecastSection = () => {
     // let DateDayTime = dateDayTimeLogic(item).short;
 
     let leftData = document.createElement("div");
-    leftData.innerHTML = `<p>20 Apr Mon</p>
-                                  <h4>11:30</h4>`;
+    leftData.innerHTML = `<p id="leftDate${i+1}">20 Apr Mon</p>
+                          <h4 id="leftTime${i+1}">11:30</h4>`;
 
     let rightData = document.createElement("div");
     rightData.className = "right-data";
